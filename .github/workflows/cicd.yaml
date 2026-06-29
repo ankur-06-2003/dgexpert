@@ -102,7 +102,7 @@ jobs:
         if: steps.trivy.outcome == 'failure'
         run: exit 1
       
-
+# push docker imager to docker hub
       - name: Push Docker Image
         uses: docker/build-push-action@v6
         with:
